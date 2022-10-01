@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+    elm:
+        image: aminnairi/elm
+        user: elm
+        working_dir: /home/elm
+        tty: true
+        stdin_open: true
+        entrypoint: elm
+        ports:
+            - 8000:8000
+        volumes:
+            - .:/home/elm
